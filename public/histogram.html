@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="histogram.css">
+		<script src="calculate.js"></script>
+	</head>
+	<body onload="calculate()">
+		<title>Histogram Generator</title>
+		<h1>Histogram Generator</h1>
+		<div>
+			<div class="lowerbounds">
+				<h2>Lower bounds</h2>
+				<div class="formwrapper">
+					<form onkeyup="calculate()">
+						Max <input type="number" name="max" step="0.01" min="0" max="100" value="100.00">
+						<br>
+						A+ <input type="number" name="ap" step="0.01" min="0" max="100" value="95.00">
+						<br>
+						A <input type="number" name="a" step="0.01" min="0" max="100" value="90.00">
+						<br>
+						A- <input type="number" name="am" step="0.01" min="0" max="100" value="85.00">
+						<br>
+						B+ <input type="number" name="bp" step="0.01" min="0" max="100" value="80.00">
+						<br>
+						B <input type="number" name="b" step="0.01" min="0" max="100" value="75.00">
+						<br>
+						B- <input type="number" name="bm" step="0.01" min="0" max="100" value="70.00">
+						<br>
+						C+ <input type="number" name="cp" step="0.01" min="0" max="100" value="65.00">
+						<br>
+						C <input type="number" name="c" step="0.01" min="0" max="100" value="60.00">
+						<br>
+						C- <input type="number" name="cm" step="0.01" min="0" max="100" value="55.00">
+						<br>
+						D <input type="number" name="d" step="0.01" min="0" max="100" value="50.00">
+						<br>
+						F <input type="number" name="f" step="0.01" min="0" max="100" value="0.00">
+					</form>
+				</div>
+			</div>
+			<div class="histogram">
+				<h2>Histogram</h2>
+				<table>
+					<tr>
+						<td>A+</td>
+						<td class="graph_cell">
+							<hr id="ap_bar">
+						</td>
+					</tr>
+					<tr>
+						<td class="text_cell">A</td>
+						<td class="graph_cell">
+							<hr id="a_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>A-</td>
+						<td class="graph_cell">
+							<hr id="am_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>B+</td>
+						<td class="graph_cell">
+							<hr id="bp_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>B</td>
+						<td class="graph_cell">
+							<hr id="b_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>B-</td>
+						<td class="graph_cell">
+							<hr id="bm_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>C+</td>
+						<td class="graph_cell">
+							<hr id="cp_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>C</td>
+						<td class="graph_cell">
+							<hr id="c_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>C-</td>
+						<td class="graph_cell">
+							<hr id="cm_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>D</td>
+						<td class="graph_cell">
+							<hr id="d_bar">
+						</td>
+					</tr>
+					<tr>
+						<td>F</td>
+						<td class="graph_cell">
+							<hr id="f_bar">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
