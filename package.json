@@ -7,6 +7,9 @@
     "start": "node index.js",
     "test": "node test.js"
   },
+  "dependencies": {
+  "express":"*"
+  },
   "license": "MIT",
   "author": "Sangje Park"
 }
