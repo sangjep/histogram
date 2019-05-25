@@ -32,8 +32,20 @@ function calculate() {
 
   // check for invalid inputs
 
-  if (max <= ap) {
-    alert("max cannot be smaller than ap")
+  if (!document.getElementsByName("max")[0].checkValidity() || !document.getElementsByName("ap")[0].checkValidity() || !document.getElementsByName("a")[0].checkValidity() || !document.getElementsByName("am")[0].checkValidity() || !document.getElementsByName("bp")[0].checkValidity() || !document.getElementsByName("b")[0].checkValidity() || !document.getElementsByName("bm")[0].checkValidity() || !document.getElementsByName("cp")[0].checkValidity() || !document.getElementsByName("c")[0].checkValidity() || !document.getElementsByName("cm")[0].checkValidity() || !document.getElementsByName("d")[0].checkValidity() || !document.getElementsByName("f")[0].checkValidity()) {
+    reset_graph();
+    document.getElementById("inval_err").hidden = false;
+    return 1; // negative input
+  } else {
+    document.getElementById("inval_err").hidden = true;
+  }
+
+  if (max - ap < 0 || ap - a < 0 || a - am < 0 || am - bp < 0 || bp - b < 0 || b - bm < 0 || bm - cp < 0 || cp - c < 0 || c - cm < 0 || cm - d < 0 || d - f < 0) {
+    reset_graph();
+    document.getElementById("range_err").hidden = false;
+    return 2; // invalid grade range
+  } else {
+    document.getElementById("range_err").hidden = true;
   }
 
   for (i = 0; i < num_grades; i++) {
@@ -81,7 +93,7 @@ function calculate() {
   max_group = Math.max(ap_range, a_range, am_range, bp_range, b_range, bm_range, cp_range, c_range, cm_range, d_range, f_range)
 
   document.getElementById("ap_bar").style.width = ap_range/max_group*100 + "%";
-  document.getElementById("a_bar").style.width = a_range/max_group*100 + "%"
+  document.getElementById("a_bar").style.width = a_range/max_group*100 + "%";
   document.getElementById("am_bar").style.width = am_range/max_group*100 + "%";
   document.getElementById("bp_bar").style.width = bp_range/max_group*100 + "%";
   document.getElementById("b_bar").style.width = b_range/max_group*100 + "%";
@@ -93,4 +105,18 @@ function calculate() {
   document.getElementById("f_bar").style.width = f_range/max_group*100 + "%";
 
   return 0;
+}
+
+function reset_graph() {
+  document.getElementById("ap_bar").style.width = 0;
+  document.getElementById("a_bar").style.width = 0;
+  document.getElementById("am_bar").style.width = 0;
+  document.getElementById("bp_bar").style.width = 0;
+  document.getElementById("b_bar").style.width = 0;
+  document.getElementById("bm_bar").style.width = 0;
+  document.getElementById("cp_bar").style.width = 0;
+  document.getElementById("c_bar").style.width = 0;
+  document.getElementById("cm_bar").style.width = 0;
+  document.getElementById("d_bar").style.width = 0;
+  document.getElementById("f_bar").style.width = 0;
 }

@@ -12,29 +12,29 @@
 				<h2>Lower bounds</h2>
 				<div class="formwrapper">
 					<form onkeyup="calculate()">
-						Max <input type="number" name="max" step="0.01" min="0" max="100" value="100.00">
+						Max <input type="number" name="max" step="0.01" min="0" max="100" value="100.00" required>
 						<br>
-						A+ <input type="number" name="ap" step="0.01" min="0" max="100" value="95.00">
+						A+ <input type="number" name="ap" step="0.01" min="0" max="100" value="95.00" required>
 						<br>
-						A <input type="number" name="a" step="0.01" min="0" max="100" value="90.00">
+						A <input type="number" name="a" step="0.01" min="0" max="100" value="90.00" required>
 						<br>
-						A- <input type="number" name="am" step="0.01" min="0" max="100" value="85.00">
+						A- <input type="number" name="am" step="0.01" min="0" max="100" value="85.00" required>
 						<br>
-						B+ <input type="number" name="bp" step="0.01" min="0" max="100" value="80.00">
+						B+ <input type="number" name="bp" step="0.01" min="0" max="100" value="80.00" required>
 						<br>
-						B <input type="number" name="b" step="0.01" min="0" max="100" value="75.00">
+						B <input type="number" name="b" step="0.01" min="0" max="100" value="75.00" required>
 						<br>
-						B- <input type="number" name="bm" step="0.01" min="0" max="100" value="70.00">
+						B- <input type="number" name="bm" step="0.01" min="0" max="100" value="70.00" required>
 						<br>
-						C+ <input type="number" name="cp" step="0.01" min="0" max="100" value="65.00">
+						C+ <input type="number" name="cp" step="0.01" min="0" max="100" value="65.00" required>
 						<br>
-						C <input type="number" name="c" step="0.01" min="0" max="100" value="60.00">
+						C <input type="number" name="c" step="0.01" min="0" max="100" value="60.00" required>
 						<br>
-						C- <input type="number" name="cm" step="0.01" min="0" max="100" value="55.00">
+						C- <input type="number" name="cm" step="0.01" min="0" max="100" value="55.00" required>
 						<br>
-						D <input type="number" name="d" step="0.01" min="0" max="100" value="50.00">
+						D <input type="number" name="d" step="0.01" min="0" max="100" value="50.00" required>
 						<br>
-						F <input type="number" name="f" step="0.01" min="0" max="100" value="0.00">
+						F <input type="number" name="f" step="0.01" min="0" max="100" value="0.00" required>
 					</form>
 				</div>
 			</div>
@@ -108,6 +108,10 @@
 						</td>
 					</tr>
 				</table>
+			</div>
+			<div class="errors">
+				<p id="inval_err" >Error: Enter a number between 0 - 100.</p>
+				<p id="range_err" >Error: Invalid grade range.</p>
 			</div>
 		</div>
 	</body>

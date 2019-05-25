@@ -11,6 +11,12 @@ h2 {
 	margin-left: 10px;
 }
 
+div.errors {
+	color: red;
+	float: left;
+	margin-left: 20px;
+}
+
 div.lowerbounds {
 	font-family: Georgia, serif;
 	background-color: #EAF1F3;
