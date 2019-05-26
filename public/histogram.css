@@ -130,6 +130,8 @@ input {
 	width: 25%;
 	float: right;
 	line-height: 2;
+	font-family: georgia;
+	font-size: 15px
 }
 
 input:invalid {
