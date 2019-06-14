@@ -1,8 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="database.css">
+    <script src="databasejs.js"></script>
   </head>
   <body>
-    <title>Database Visualization</title>
+    <title>Student Database</title>
+    <div>
+      <h1>Student Database</h1>
+    </div>
+    <div id="buttonDIV">
+      <button onclick="showTable()">Database</button>
+      <button onclick="visualize()">Visualize</button>
+    </div>
+    <div id="formDIV">
+      <form>
+        Name: <input type="text" id="name_input" name="name_val" required>
+        <br>
+        Weight: <input type="number" name="weight_val" min="0" required>
+        <br>
+        Height: <input type="number" name="height_val" min="0" required>
+        <br>
+        Hair Color: <input type="list" name="haircol_val" required>
+        <br>
+        GPA: <input type="number" name="gpa_val" step="0.01" min="0" max="4.33" required>
+        <br>
+        CMPT major: <input type="checkbox" name="cmpt_bool">
+        <br>
+        <div id="submitDIV">
+          <input type="button" name="save_btn" value="Save" onclick="saveData()">
+        </div>
+      </form>
+    </div>
+    <div id="tableDIV">
+      <table id="studentData">
+        <tr>
+          <th>&nbsp</th>
+          <th>name</th>
+          <th>weight</th>
+          <th>height</th>
+          <th>hair color</th>
+          <th>gpa</th>
+          <th>major</th>
+          <th>&nbsp</th>
+        </tr>
+      </table>
+    </div>
+    <div id="errorDIV">
+      <p id="haircolor_err" hidden>Error: Invalid hair color.</p>
+      <p id="gpa_err" hidden>Error: Invalid gpa input.</p>
+      <p id="resolve_err" hidden>Error: Input errors must be resolved before visual.</p>
+    </div>
+    <div id="visualDIV" />
   </body>
 </html>

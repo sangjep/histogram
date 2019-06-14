@@ -13,5 +13,7 @@ app.get('/', function(req, res) {
 app.get('/histogram', function(req, res) {
     res.sendFile('public/histogram.html', { root: __dirname })
 })
-
+app.get('/database', function(req, res) {
+    res.sendFile('public/database.html', { root: __dirname })
+})
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))

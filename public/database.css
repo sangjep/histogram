@@ -1,0 +1,104 @@
+h1 {
+  padding-left: 10px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  border-collapse: collapse;
+  counter-reset: rowNumber;
+}
+
+table tr:not(:first-child) {
+  counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+  content: counter(rowNumber);
+  min-width: 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+th, td {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+input {
+  float: left;
+  width: 75px;
+  margin-top: 5px;
+}
+
+input[name=name_val], input[name=weight_val], input[name=height_val],
+input[name=haircol_val], input[name=gpa_val], input[name=save_btn] {
+  float: right;
+  width: 60%;
+  margin-top: 5px;
+}
+
+input[name=cmpt_bool] {
+  width: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  float: right;
+}
+
+input[name=submit_btn] {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#buttonDIV {
+  margin: auto;
+  padding-left: 50px;
+}
+
+#formDIV {
+  width: 250px;
+  float: left;
+  border: 1 px solid black;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+#tableDIV {
+  width: 550px;
+  padding-top: 25px;
+  float: left;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+}
+
+#visualDIV {
+
+  border: 3 px solid black;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+form {
+  line-height: 2;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  height: 230px;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
